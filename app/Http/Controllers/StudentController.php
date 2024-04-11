@@ -12,31 +12,17 @@ class StudentController extends Controller
         // $student = Student::all();
         // return view('student', ['studentList' => $student]);
 
-        // Query Builder
-        // $student = DB::table('students')->get();
-        // DB::table('students')->insert([
-        //     'name' => 'Jefri Nichol',
-        //     'gender' => 'L',
-        //     'nis' => '1152000001',
-        //     'class_id' => 1
-        // ]);
-        // DB::table('students')->where('id', 26)->update([
-        //     'name' => 'Adipati Dolken'
-        // ]);
-        // DB::table('students')->where('id', 26)->delete();
+        $nilai = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-        // Eloquent
-        // $student = Student::all();
-        // Student::create([
-        //     'name' => 'Anatasia Kosasih',
-        //     'gender' => 'p',
-        //     'nis' => '1152000004',
-        //     'class_id' => 2
-        // ]);
-        // Student::find(27)->update([
-        //     'name' => 'Astrid Qanitah Arioputri',
-        //     'nis' => '1152000043'
-        // ]);
-        Student::find(27)->delete();
+        // $nilaiKaliDua = [];
+        // foreach ($nilai as $value) {
+        //     array_push($nilaiKaliDua, $value * 2);
+        // }
+
+        $aaa = collect($nilai)->map(function ($value) {
+            return $value * 2;
+        })->all();
+
+        dd($aaa);
     }
 }
