@@ -1,32 +1,26 @@
 @extends('layouts.mainlayout')
 
-@section('title', 'Students')
+@section('title', 'Extracurricular')
 
 @section('content')
-    <h1>Ini halaman students</h1>
-    <h3>Student List</h3>
+    <h1>Ini halaman extracurricular</h1>
+    <h3>Extracurricular List</h3>
 
     <table class="table">
         <thead>
             <tr>
-                <th>#</th>
+                <th>No</th>
                 <th>Name</th>
-                <th>Gender</th>
-                <th>Nis</th>
-                <th>Class</th>
-                <th>Extracurriculars</th>
+                <th>Member</th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($studentList as $data)
+            @foreach ($ekskulList as $data)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $data->name }}</td>
-                    <td>{{ $data->gender }}</td>
-                    <td>{{ $data->nis }}</td>
-                    <td>{{ $data->class['name'] }}</td>
                     <td>
-                        @foreach ($data->extracurriculars as $item)
+                        @foreach ($data->students as $item)
                             - {{ $item->name }} <br>
                         @endforeach
                     </td>
@@ -34,4 +28,5 @@
             @endforeach
         </tbody>
     </table>
+
 @endsection
