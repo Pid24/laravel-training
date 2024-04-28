@@ -32,6 +32,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/extracurricular">Extracurricular</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/teacher">Teacher</a>
+                    </li>
                 </ul>
             </div>
         </div>

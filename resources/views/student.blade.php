@@ -15,6 +15,7 @@
                 <th>Nis</th>
                 <th>Class</th>
                 <th>Extracurriculars</th>
+                <th>Homeroom Teacher</th>
             </tr>
         </thead>
         <tbody>
@@ -27,9 +28,10 @@
                     <td>{{ $data->class['name'] }}</td>
                     <td>
                         @foreach ($data->extracurriculars as $item)
-                            - {{ $item->name }} <br>
+                            {{ $item->name }} <br>
                         @endforeach
                     </td>
+                    <td>{{ $data->class->homeroomTeacher->name }}</td>
                 </tr>
             @endforeach
         </tbody>

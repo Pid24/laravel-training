@@ -8,12 +8,7 @@ use Illuminate\Http\Request;
 class ClassController extends Controller
 {
     public function index() {
-
-        // Lazy Load
-        // $class = ClassRoom::all();
-
-        // Eager Load
-        $class = ClassRoom::with('students')->get();
+        $class = ClassRoom::with('students', 'homeroomTeacher')->get();
         return view('classroom', ['classList' => $class]);
     }
 }
