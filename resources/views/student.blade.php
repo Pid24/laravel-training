@@ -4,6 +4,11 @@
 
 @section('content')
     <h1>Ini halaman students</h1>
+
+    <div class="my-5">
+        <a href="student-add" class="btn btn-primary">Add Data</a>
+    </div>
+
     <h3>Student List</h3>
 
     <table class="table">
