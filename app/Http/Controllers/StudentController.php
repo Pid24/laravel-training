@@ -7,6 +7,7 @@ use App\Models\ClassRoom;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
+use App\Http\Requests\StudentCreateRequest;
 
 class StudentController extends Controller
 {
@@ -26,7 +27,7 @@ class StudentController extends Controller
         return view('student-add', ['class' => $class]);
     }
 
-    public function store(Request $request) {
+    public function store(StudentCreateRequest $request) {
         $student = Student::create($request->all());
 
         if($student) {
