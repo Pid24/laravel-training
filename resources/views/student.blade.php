@@ -44,4 +44,8 @@
             @endforeach
         </tbody>
     </table>
+
+    <div class="my-5">
+        {{ $studentList->links() }}
+    </div>
 @endsection

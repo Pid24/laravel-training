@@ -12,7 +12,7 @@ use App\Http\Requests\StudentCreateRequest;
 class StudentController extends Controller
 {
     public function index() {
-        $student = Student::get();
+        $student = Student::paginate(15);
         return view('student', ['studentList' => $student]);
 
     }
